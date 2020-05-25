@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="developer" content="ycamposde@gmail.com"/>
+  <style>
+    .js-numero-tarjeta.cc_type_vs + p::after { content: "Visa"; }
+    .js-numero-tarjeta.cc_type_jc + p::after { content: "JCB"; }
+    .js-numero-tarjeta.cc_type_dc + p::after { content: "Diners Club"; }
+    .js-numero-tarjeta.cc_type_mc + p::after { content: "Mastercard"; }
+    .js-numero-tarjeta.cc_type_ax + p::after { content: "American Express"; }
+    .js-numero-tarjeta.cc_type_unknown + p::after { content: "Tarjeta Invalido"; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="text" class="js-numero-tarjeta" name="cc" maxlength="19"/>
+    <p class="well">Card type is: </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+    <script src="ccFormat.js"></script> 
+  </div>
+</body>
+</html>
